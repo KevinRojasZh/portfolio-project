@@ -1,0 +1,32 @@
+<!doctype html>
+<html class="no-js" lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block head_title %}Titulo base {% endblock head_title %}</title>
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+{% include "_includes/_header.html" %} 
+
+
+
+{% block  page_content %}
+
+{% endblock page_content %}
+
+{% block footer %}
+
+{% include "_includes/_footer.html" %} 
+
+{% endblock footer %}
+
+
+</body>
+
+</html>
+
+
