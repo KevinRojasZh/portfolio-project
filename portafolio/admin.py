@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Developer
+from .models import Developer, Lenguajes
 
 @admin.register(Developer)
 class DeveloperAdmin(admin.ModelAdmin):
@@ -10,9 +10,16 @@ class DeveloperAdmin(admin.ModelAdmin):
         'telefono',
         'email',
         'descripcion',
-        'tecnologias',
         'fotos',
         'created_by',
         
     ]
-    list_filter = ['descripcion','tecnologias']
+    filter_horizontal = ['tecnologias',]
+    list_filter = ['tecnologias']
+
+@admin.register(Lenguajes)
+class DeveloperAdmin(admin.ModelAdmin):
+    list_display = [
+        'nombre',
+        
+    ]

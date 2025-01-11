@@ -4,19 +4,28 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% block head_title %}Titulo base {% endblock head_title %}</title>
+  <title>{% block head_title %}Portfolio Kevin Rojas{% endblock head_title %}</title>
 
   <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
-{% include "_includes/_header.html" %} 
+  {% block header %}
+  
+  {% include "_includes/_header.html" %} 
+
+  {% endblock header %}
 
 
 
-{% block  page_content %}
+{% block  main %}
 
-{% endblock page_content %}
+{% include "_includes/_main.html" %}
+
+{% endblock main %}
+
+
+
 
 {% block footer %}
 
