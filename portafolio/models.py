@@ -25,7 +25,10 @@ class Developer(models.Model):
     tecnologias = models.ManyToManyField("Lenguajes",
                                             verbose_name="tecnologias",
                                             )
-    fotos = models.ImageField(upload_to='portafolio/static/', height_field=None, width_field=None, max_length=None)
+    fotos = models.ImageField(upload_to='portafolio/', height_field=None, width_field=None, max_length=None)
+    cv = models.FileField(upload_to='cvs/', null=True, blank=True)
+    github = models.URLField(max_length=500,null=True, blank=True)
+    linkedin = models.URLField(max_length=500, null=True, blank=True)
     created_by = models.ForeignKey(User, null=True, blank=True, on_delete=models.SET_NULL)
 
 
