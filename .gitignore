@@ -21,3 +21,6 @@ db.sqlite3
 
 # VS Code settings
 .vscode/
+
+# Apuntes personales
+apuntes.txt
