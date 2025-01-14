@@ -52,11 +52,7 @@
                     </nav>
                 </div>
             </article>
-        <!--  <article>
-                <h2>Sobre mi</h2>
-                <p>{{developer.descripcion}}</p>
-            </article>
-        </section>-->
+        
         <hr>
     </header>
 {% endblock header %}
@@ -114,12 +110,20 @@
                         </a>
             </article>
         </section>
+        <section>
+            <article>
+                <h2>Sobre mi</h2>
+                <p>{{developer.descripcion}}</p>
+                <h3>Tecnologias</h3>
+                {% for tecnologia in tecnologias %}
+                    <p >{{tecnologia}}</p>
+                {% endfor %}
+            </article>
+        </section>
+        </section>
 
-        <aside>
-            <article></article>
-            <article></article>
-            <article></article>
-        </aside>
+
+
         <hr>
     </main>
 {% endblock main %}
@@ -166,4 +170,3 @@
 
 
 
-<

@@ -10,6 +10,8 @@ class HomeView(TemplateView):
         # Call the base implementation first to get a context
         context = super().get_context_data(**kwargs)
         # Add in a QuerySet of all the books
-        context["developer"] = Developer.objects.get(id=1)  # Obtiene el objeto con id=1
+        context["developer"] = Developer.objects.get(id=1) 
+        developer = Developer.objects.get(id=1) # Obtiene el objeto con id=1
+        context["tecnologias"] = developer.tecnologias.all()
         return context
 
